@@ -1,0 +1,24 @@
+/*Creamos un CSS que luego importaremos a .JS*/
+body {
+  margin: 0;
+  padding: 0;
+  background: cyan;
+}
+.book {
+  box-sizing: border-box;
+  padding: 1.1rem;
+  margin: 1.1rem;
+  background: #fff;
+  border: 1px solid black;
+  border-radius: 5px;
+}
+h1 {
+  color: blue;
+}
+@media screen and (min-width: 768px) {
+  .books {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 1.5rem;
+  }
+}
