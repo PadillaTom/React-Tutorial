@@ -74,3 +74,10 @@ class App extends React.Component {
 }
 // Export
 export default App;
+
+//  Cual usar?  ---> Function VS Class Based Components
+// It's all about preference. Segun necesitemos la Class podemos usarla, pero nos podriamos olvidar de aplicarla cuando la necesitamos.
+// Conviene usar mas seguido la Class, ya veremos.
+// CLASS tiene mas beneficios, mas usos.
+
+// State
