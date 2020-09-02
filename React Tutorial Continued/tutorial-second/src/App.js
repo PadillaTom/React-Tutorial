@@ -40,6 +40,9 @@
 // Exports -->
 // export default App;
 
+//
+//
+//
 // :::::::::::::::::::: Class Based Components :::::::::::::::::::::::
 // State, Life cycle methods
 // React Hooks
@@ -49,35 +52,49 @@
 // Component class is used to transfer from basic ES6 Class.
 
 // Imports
-import React, { Component } from 'react';
-import { name, age, person } from './data';
-import Banner from './Components/Header/Banner';
+// import React, { Component } from 'react';
+// import { name, age, person } from './data';
+// import Banner from './Components/Header/Banner';
 
-// Class
-class App extends React.Component {
-  render() {
-    {
-      /* SIEMPRE USAR RENDER(){RETURN()} */
-    }
-    return (
-      <section>
-        <Banner />{' '}
-        {/* BANNER: Si lo Escribo sin Importar, me lo importa automaticamente */}
-        <p>My content:</p>
-        <p>{name}</p>
-        <p>{age}</p>
-        {/* <p>{person}</p> Objects cannot be used like this! */}
-        <p>{person.name}</p> {/* Only can Access KEYS*/}
-      </section>
-    );
-  }
-}
+// // Class
+// class App extends React.Component {
+//   render() {
+//     {
+//       /* SIEMPRE USAR RENDER(){RETURN()} */
+//     }
+//     return (
+//       <section>
+//         <Banner />{' '}
+//         {/* BANNER: Si lo Escribo sin Importar, me lo importa automaticamente */}
+//         <p>My content:</p>
+//         <p>{name}</p>
+//         <p>{age}</p>
+//         {/* <p>{person}</p> Objects cannot be used like this! */}
+//         <p>{person.name}</p> {/* Only can Access KEYS*/}
+//       </section>
+//     );
+//   }
+// }
 // Export
-export default App;
+// export default App;
 
 //  Cual usar?  ---> Function VS Class Based Components
 // It's all about preference. Segun necesitemos la Class podemos usarla, pero nos podriamos olvidar de aplicarla cuando la necesitamos.
 // Conviene usar mas seguido la Class, ya veremos.
 // CLASS tiene mas beneficios, mas usos.
 
-// State
+//
+//
+//
+// :::::::::::::::::::: Class Based Components :::::::::::::::::::::::
+import React from 'react';
+import BookList from './BookList';
+
+const App = () => (
+  <section>
+    <h1>This is Our App</h1>
+    <BookList> </BookList>
+  </section>
+);
+
+export default App;
