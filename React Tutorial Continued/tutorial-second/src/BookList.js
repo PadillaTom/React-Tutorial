@@ -13,27 +13,38 @@ export default class BookList extends Component {
       books: booksData,
     };
   }
-
-  // STATE ---> An object that contains DATA, could contain an API, 1million entrances, we woudlnt know
-  state = {
-    // books: [
-    //   {
-    //     id: 1,
-    //     book: 'Book number 1',
-    //     author: 'John Doe',
-    //   },
-    //   {
-    //     id: 2,
-    //     book: 'Book number 2',
-    //     author: 'Bobby',
-    //   },
-    // ],
-    //
-    // Otra manera de importar la data desde otro File (Modulo: BookData.js)
-    // books: booksData,
-  };
   //
-  // THIS.SETSTATE({})
+  // :::::::::::::::::::: STATE
+  // An object that contains DATA, could contain an API, 1million entrances, we woudlnt know
+  // state = {
+  // books: [
+  //   {
+  //     id: 1,
+  //     book: 'Book number 1',
+  //     author: 'John Doe',
+  //   },
+  //   {
+  //     id: 2,
+  //     book: 'Book number 2',
+  //     author: 'Bobby',
+  //   },
+  // ],
+  //
+  // Otra manera de importar la data desde otro File (Modulo: BookData.js)
+  // books: booksData,
+  // };
+  //
+  // Handle Delete: Lo queremos pasar a nuestro NIETO (BUTTON dentro de BOOK)
+  handleDelete = (id) => {
+    // console.log(`I am from Parent Component`);
+    // console.log(`My ID is: ${id}`);
+    // PARA "BORAR" UN LIBRO DEL DOM ----> Que nos devuelva una lista sin el Item Seleccionado
+    const sortedBooks = this.state.books.filter((item) => item.id !== id);
+    // console.log(sortedBooks); // Vemos el nuevo Array creado, sin el Item Seleccionado
+    this.setState({
+      books: sortedBooks, // Modificamos el STATE a partir de SET STATE, haciendo pasar la Sorted Books
+    });
+  };
   render() {
     // Usar State base:
     // const books = this.state.books;
@@ -48,7 +59,11 @@ export default class BookList extends Component {
         <h3>This is our BookList</h3>
         {/* APLICAMOS MAP METHOD */}
         {this.state.books.map((item) => (
-          <Book info={item} key={item.id}></Book>
+          <Book
+            info={item}
+            key={item.id}
+            handleDelete={this.handleDelete} // Pasamos Handle Delete como PROP para BOOK
+          ></Book>
         ))}
       </section>
     );

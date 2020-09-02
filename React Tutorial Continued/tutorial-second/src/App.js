@@ -89,10 +89,10 @@
 // :::::::::::::::::::: Class Based Components :::::::::::::::::::::::
 import React from 'react';
 import BookList from './BookList';
+import './App.css';
 
 const App = () => (
   <section>
-    <h1>This is Our App</h1>
     <BookList> </BookList>
   </section>
 );
