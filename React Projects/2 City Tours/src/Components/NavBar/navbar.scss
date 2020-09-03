@@ -1,0 +1,34 @@
+// :::::: NavBar ::::::::::::::
+
+// Imports:
+@import '../../index.scss';
+
+// Styles:
+
+.navbar {
+  background: $mainBlack;
+  padding: 0.5rem 1rem;
+  display: grid;
+  grid-template-columns: auto 1fr; // Logo = Auto, so we dont modify it. Links 1fr
+  align-items: center;
+}
+.nav-links {
+  list-style-type: none;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  text-align: center;
+}
+.nav-link {
+  color: $mainGrey;
+  text-transform: capitalize;
+  text-decoration: none;
+  font-size: 1.2rem;
+  transition: all 0.3s linear;
+  // Instead of Re-Writing everything we can use ---> &:hover inside the element
+  &:hover {
+    color: $mainGreen;
+  }
+}
+.active {
+  color: $mainGreen;
+}

@@ -1,0 +1,19 @@
+// ::::::::::: SASS :::::::::::
+// Features
+//
+// Variables: $NAME, to use Property: $NAME
+$mainBlack: #222;
+$mainGreen: #82b340;
+$mainWhite: #fff;
+$mainGrey: #ececec;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: 'Noto Sans JP', sans-serif;
+  background: $mainWhite;
+  color: $mainBlack;
+}
