@@ -11,7 +11,12 @@ export default class TourList extends Component {
   };
   // Remove Tour:
   removeTour = (id) => {
-    console.log(id);
+    // console.log(id);// Comprobamos el Tour OnClick en TOUR CLOSE BTN
+    const { tours } = this.state;
+    // Filtramos la Array Tours
+    const sortedTours = tours.filter((tour) => tour.id !== id); // Nueva Array: Para cada Tour dentro del Array, guardar en NEW los tour que no comparten la misma ID
+    // Display la New Array:
+    this.setState({ tours: sortedTours });
   };
 
   render() {
