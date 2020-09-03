@@ -1,6 +1,17 @@
 import React, { Component } from 'react';
 import './tour.scss';
 export default class Tour extends Component {
+  // State para Toggle la INFO:
+  state = {
+    showInfo: false,
+  };
+  handleInfo = () => {
+    this.setState({
+      showInfo: !this.state.showInfo,
+    });
+  };
+  //
+  // Render Main Function:
   render() {
     // console.log(this.props); // Vemos las Props Pasadas
     // Destructure each :
@@ -22,11 +33,11 @@ export default class Tour extends Component {
           <h4>{name}</h4>
           <h5>
             info
-            <span>
+            <span onClick={this.handleInfo}>
               <i className='fas fa-caret-square-down'></i>
             </span>
           </h5>
-          <p>{info}</p>
+          {this.state.showInfo && <p>{info}</p>}
         </div>
       </article>
     );
