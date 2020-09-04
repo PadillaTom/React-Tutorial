@@ -44,13 +44,33 @@ class App extends Component {
     });
   };
   clearList = (e) => {
-    console.log('Clear List');
+    // console.log('Clear List'); // Vemos al Tocar BTN
+    this.setState({
+      items: [], // Ponemos el Array Vacio.
+    });
   };
   handleEdit = (id) => {
-    console.log(`Handle Edit : ${id}`);
+    // console.log(`Handle Edit : ${id}`); // Vemos al Tocar BTN
+    // 1) Filtramos la lista como Delete
+    const filteredItems = this.state.items.filter((item) => item.id !== id);
+    // 2) Get el Selected Item que NO esta en la FILTER ANTERIOR:
+    //    SI matchea ID
+    const selectedItem = this.state.items.find((item) => item.id === id);
+    // Ponemos el item en el State:
+    this.setState({
+      items: filteredItems, // Mostramos la Filtered(sin el item)
+      item: selectedItem.title, // En el input mostramos el NOMBRE del Selected
+      id: id, // Mantenemos el mismo ID que antes
+      editItem: true, // Cambia por los Style de Bootstrap
+    });
   };
   handleDelete = (id) => {
-    console.log(`Handle Delete : ${id}`);
+    // console.log(`Handle Delete : ${id}`); // Vemos al Tocar BTN
+    // Filter --> New Array = Items que no Match el ID Seleccionado
+    const filteredItems = this.state.items.filter((item) => item.id !== id);
+    this.setState({
+      items: filteredItems, // Actualizamos
+    });
   };
 
   // Render()

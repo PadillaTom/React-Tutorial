@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import Item from '../ToDo Item/TodoItem';
 import TodoItem from '../ToDo Item/TodoItem';
 
 // Main
