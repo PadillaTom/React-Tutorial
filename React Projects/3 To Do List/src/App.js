@@ -8,14 +8,14 @@ import TodoList from './Component/To Do List/TodoList';
 // UUID NEW SYNTAX ----------------> IMPORT : import { v4 as uuidv4 } from 'uuid';
 //                                   INVOKE : uuidv4();
 //
+//
+//
+//
 // Main:
 class App extends Component {
   //State:
   state = {
-    items: [
-      { id: 1, title: 'Wake Up' },
-      { id: 2, title: 'Shower' },
-    ],
+    items: [],
     id: uuidv4(), // Nos brinda numeros de ID, asi no tenemos que escribirlo nosotros
     item: '',
     editItem: false,
@@ -23,10 +23,25 @@ class App extends Component {
 
   // Methods:
   handleChange = (e) => {
-    console.log('Handle Change');
+    // console.log('Handle Change'); // Vemos como LOG cuando type.
+    this.setState({
+      item: e.target.value, // Agrega a ITEM:" " --> El valor tipeado.
+    });
   };
   handleSubmit = (e) => {
-    console.log('Handle Submit');
+    // console.log('Handle Submit'); // Vemos el Submit y como refreshea. Prevent Default!
+    e.preventDefault();
+    const newItem = {
+      id: this.state.id, // Agarramos el ID creada por UUID
+      title: this.state.item, // Agarramos el VALUE pasado a ITEM (Change)
+    };
+    const updatedItems = [...this.state.items, newItem]; // Agarramos el Array con: Lo contenido + lo New
+    this.setState({
+      items: updatedItems, // Actualizamos array
+      item: ' ', // Volvemos a vaciar el Value
+      id: uuidv4(), // new ID
+      editItem: false, // Volvemos a FALSE (Porque TURE dará la opcion de editItem)
+    });
   };
   clearList = (e) => {
     console.log('Clear List');
