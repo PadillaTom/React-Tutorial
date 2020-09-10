@@ -28,11 +28,26 @@ Code: https://github.com/PadillaTom/P2React-Budget-App \
 
 
 **P3: Cocktail Database**\
-Most important features applied: Npx create-react-app, API from: https://www.thecocktaildb.com/, React Router Dom, React Functional Based Components, Hooks, 
+Most important features applied: Npx create-react-app, API from: https://www.thecocktaildb.com/, React Router Dom, React Functional Based Components, Context API, Hooks, 
 HTTP Requests / UseEffect / UseRef
 
 Take a Look -->\
 Code: https://github.com/PadillaTom/P3React-CocktailDB \
-Website: https://p3-react-cocktaildb.netlify.app/
+Website: https://p3-react-cocktaildb.netlify.app/ \
 
+
+**P4: Github Users**\
+Most important features applied: Npx create-react-app, React Router Dom, React Functional Based Components, Context API, Hooks, AXIOS: HTTP Requests / UseEffect, Github API, Fusion Charts, Authentication by: Auth0. \
+
+Take a Look -->\
+Code: https://github.com/PadillaTom/P4React-GitHubUsers \
+Website: https://p4-react-githubusers.netlify.app/login
+
+
+**P4: Vintage Tech Store**\
+Most important features applied: Npx create-react-app, React Router Dom, React Functional Based Components, Context API, Hooks, AXIOS: HTTP Requests / UseEffect, Github API, Fusion Charts, Authentication by: Auth0. \
+
+Take a Look -->\
+Code: https://github.com/PadillaTom/P4React-GitHubUsers \
+Website: https://p4-react-githubusers.netlify.app/login
 
